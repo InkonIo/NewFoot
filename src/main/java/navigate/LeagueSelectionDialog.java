@@ -190,7 +190,6 @@ public class LeagueSelectionDialog extends JDialog {
         }
     }
 
-
     private ImageIcon loadImageFromURL(String path) {
         if (path == null || path.isEmpty()) {
             System.err.println("Ошибка: path равно null или пусто.");
@@ -316,26 +315,24 @@ public class LeagueSelectionDialog extends JDialog {
                 "Vélez Sarsfield", "Estudiantes", "Newell's Old Boys"
         });
 
-        leagueLogos.put("Premier League (Англия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\epl.jpg"); // 1
-        leagueLogos.put("La Liga (Испания)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\laliga.png"); // 2
-        leagueLogos.put("Bundesliga (Германия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\bundes.jpg"); // 3
-        leagueLogos.put("Serie A (Италия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\serieA.png");
-        leagueLogos.put("Ligue 1 (Франция)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\ligueOne.png");
-        leagueLogos.put("Eredivisie (Нидерланды)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\eredivise.png");
-        leagueLogos.put("J1 League (Япония)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\japan.png");
-        leagueLogos.put("Major League Soccer (США)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\mls.png");
-        leagueLogos.put("Primeira Liga (Португалия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\portugal.png");
-        leagueLogos.put("Scottish Premiership (Шотландия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\scottish.png");
-        leagueLogos.put("Süper Lig (Турция)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\turkey.png");
-        leagueLogos.put("Campeonato Brasileiro Série A (Бразилия)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\brazil.jpg");
-        leagueLogos.put("Primera División (Аргентина)", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\League\\argentina.jpg");
+        leagueLogos.put("Premier League (Англия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\epl.jpg"); // 1
+        leagueLogos.put("La Liga (Испания)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\laliga.png"); // 2
+        leagueLogos.put("Bundesliga (Германия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\bundes.jpg"); // 3
+        leagueLogos.put("Serie A (Италия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\serieA.png");
+        leagueLogos.put("Ligue 1 (Франция)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\ligueOne.png");
+        leagueLogos.put("Eredivisie (Нидерланды)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\eredivise.png");
+        leagueLogos.put("J1 League (Япония)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\japan.png");
+        leagueLogos.put("Major League Soccer (США)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\mls.png"); // 1
+        leagueLogos.put("Primeira Liga (Португалия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\portugal.png");
+        leagueLogos.put("Scottish Premiership (Шотландия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\scottish.png");
+        leagueLogos.put("Süper Lig (Турция)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\turkey.png"); // 1
+        leagueLogos.put("Campeonato Brasileiro Série A (Бразилия)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\brazil.png"); // 1
+        leagueLogos.put("Primera División (Аргентина)", "D:\\JustFol\\NewFoot\\src\\main\\resources\\League\\argentina.png"); // 1
 
-
-        // Добавляем логотип только для PSG
+        // only psg ezhhi
         clubLogos = new HashMap<>();
-        clubLogos.put("PSG", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\clubs\\psg.png");
+        clubLogos.put("PSG", "D:\\JustFol\\NewFoot\\src\\main\\resources\\clubs\\psg.png");
     }
-
 
     public String getSelectedLeague() {
         return (String) leagueDropdown.getSelectedItem();

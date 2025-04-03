@@ -1,6 +1,7 @@
 package guis;
 
 import navigate.LeagueSelectionDialog;
+import navigate.MyClub;
 import navigate.NewsGUI;
 import navigate.ProfileGUI;
 import org.json.JSONArray;
@@ -39,12 +40,12 @@ public class PersonalAccount extends JFrame {
         contentPanel = new JPanel(new BorderLayout());
         add(contentPanel, BorderLayout.CENTER);
 
-        addMenuItem("Профиль", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\user.png");
-        addMenuItem("Новости футбола", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\newspaper-open.png");
-        addMenuItem("Мой клуб", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\football.png");
-        addMenuItem("Следим за игроками", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\football-player.png");
-        addMenuItem("Цены и трансферы", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\usd-circle.png");
-        addMenuItem("Календарь матчей", "C:\\Users\\lapsh\\OneDrive - uib.kz\\Рабочий стол\\fotballer\\src\\main\\resources\\icons\\calendar.png");
+        addMenuItem("Профиль", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\user.png");
+        addMenuItem("Новости футбола", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\newspaper-open.png");
+        addMenuItem("Мой клуб", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\football.png");
+        addMenuItem("Следим за игроками", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\football-player.png");
+        addMenuItem("Цены и трансферы", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\usd-circle.png");
+        addMenuItem("Календарь матчей", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\calendar.png");
 
         add(sidePanel, BorderLayout.WEST);
         setupPanel();
@@ -135,14 +136,6 @@ public class PersonalAccount extends JFrame {
         expanded = false;
     }
 
-    public static void setClubLogoUrl(String url) {
-        clubLogoUrl = url;
-    }
-
-    public static String getClubLogoUrl() {
-        return clubLogoUrl;
-    }
-
     private void expandPanel() {
         if (!expanded) {
             sidePanel.setPreferredSize(new Dimension(200, getHeight()));
@@ -212,6 +205,8 @@ public class PersonalAccount extends JFrame {
             contentPanel.add(new ProfileGUI(favoriteLeague, favoriteClub, clubLogoUrl, null));
         } else if ("Новости футбола".equals(section)) {
             contentPanel.add(new NewsGUI(null));
+        } else if ("Мой клуб".equals(section)) {
+            contentPanel.add(new MyClub(favoriteClub, clubLogoUrl));  // Передаем клуб в MyClub
         } else {
             contentPanel.add(new JLabel("Раздел " + section + " в разработке", SwingConstants.CENTER));
         }
@@ -219,6 +214,7 @@ public class PersonalAccount extends JFrame {
         contentPanel.revalidate();
         contentPanel.repaint();
     }
+
 
 
     public String fetchClubLogo(String clubName) {
