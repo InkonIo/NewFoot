@@ -47,7 +47,7 @@ public class FootballAPI {
             for (int i = 0; i < matches.length(); i++) {
                 JSONObject match = matches.getJSONObject(i);
 
-                JSONObject homeTeam = match.optJSONObject(  "homeTeam");
+                JSONObject homeTeam = match.optJSONObject("homeTeam");
                 JSONObject awayTeam = match.optJSONObject("awayTeam");
                 JSONObject competition = match.optJSONObject("competition");
 

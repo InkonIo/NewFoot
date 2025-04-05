@@ -1,9 +1,6 @@
 package guis;
 
-import navigate.LeagueSelectionDialog;
-import navigate.MyClub;
-import navigate.NewsGUI;
-import navigate.ProfileGUI;
+import navigate.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -43,7 +40,6 @@ public class PersonalAccount extends JFrame {
         addMenuItem("Профиль", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\user.png");
         addMenuItem("Новости футбола", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\newspaper-open.png");
         addMenuItem("Мой клуб", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\football.png");
-        addMenuItem("Следим за игроками", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\football-player.png");
         addMenuItem("Цены и трансферы", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\usd-circle.png");
         addMenuItem("Календарь матчей", "D:\\JustFol\\NewFoot\\src\\main\\resources\\icons\\calendar.png");
 
@@ -207,7 +203,11 @@ public class PersonalAccount extends JFrame {
             contentPanel.add(new NewsGUI(null));
         } else if ("Мой клуб".equals(section)) {
             contentPanel.add(new MyClub(favoriteClub, clubLogoUrl));  // Передаем клуб в MyClub
-        } else {
+        }  else if ("Цены и трансферы".equals(section)) {
+            contentPanel.add(new PriceAndTransfer());  // Передаем клуб в MyClub
+        }  else if ("Календарь матчей".equals(section)) {
+            contentPanel.add(new CalendarOfMatches());  // Передаем клуб в MyClub
+        }  else {
             contentPanel.add(new JLabel("Раздел " + section + " в разработке", SwingConstants.CENTER));
         }
 
